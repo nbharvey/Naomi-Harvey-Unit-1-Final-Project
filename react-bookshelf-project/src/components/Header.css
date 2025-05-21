@@ -1,0 +1,27 @@
+.header {
+    background-color: #9896f1;
+    padding: 10px;
+    border-top: 4px solid #574b9b;
+    border-bottom: 4px solid #574b9b;
+    border-right: 4px dashed #574b9b;
+    border-left: 4px dashed #574b9b;
+    text-align: center;
+}
+
+#h1 {
+    background-color: #edb1f1;
+    padding: 10px 5%;
+    color: #272343;
+    border: 2px dashed #574b9b;
+    text-align: center;
+    display: block;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    float: left;
+    /* display: flex; */
+    margin-left: 0px;
+}

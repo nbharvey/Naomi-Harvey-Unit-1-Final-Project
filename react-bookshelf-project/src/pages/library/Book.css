@@ -1,0 +1,130 @@
+/* .bookshelf {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #7a4a3b;
+    border: 15px solid #6a3d2e;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    height: auto;
+}
+
+.shelf {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    position: relative;
+    width: auto;
+    height: 200px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ac8b76;
+    border: 10px solid #6a3d2e;
+    /* border-top: 2px solid #6a3d2e;
+    border-left: 2px solid #6a3d2e;
+    border-top: 2px solid #6a3d2e; */
+    /* box-sizing: border-box;
+    padding-right: 40px; */
+
+
+.spine {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: auto;
+    max-width: calc(100% / 6);
+    max-height: 120px;
+
+
+    flex-wrap: nowrap;
+    text-wrap: wrap;
+    /* position: relative; */
+    /* bottom: 0; */
+    writing-mode: vertical-rl;
+    /* overflow-wrap: break-word; */
+    /* word-break: break-word; */
+    /* white-space: normal; */
+    hyphens: auto;
+
+
+    padding: 5px;
+    padding-top: 20px;
+    
+    background-color: #66bfbf;
+    
+    font-size: clamp(8px, 2vw, 14px);
+    text-align: center;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family:'Times New Roman', Times, serif;
+    /* width: auto; */
+    max-width: fit-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .spine {
+    writing-mode: vertical-lr;
+
+    display: inline-block;
+    /* grid-template-columns: auto auto auto auto;
+    grid-template-rows: 80px 20px;
+    grid-template-columns: 80px 50px;
+
+    justify-content: space-evenly; */
+
+    /* padding: 5px;
+    background-color: #66bfbf;
+    font-size: 10px;
+    text-align: center;
+    margin: 1px;
+    border: 2px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-height: 120px;
+}
+
+.holds-books {
+    background-color: #c7b198;
+    border: 5px solid #8f4426;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 60%;
+    font-size: 0;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    
+}
+
+.shelf {
+border-bottom: 5px solid #8f4426;
+
+/* max-height: 120px; */
+
+
+
+/* TODO: fix text wrapping for long words that do not have spaces
+TODO: create div shelf and figure out how to insert it into the bookshelf and still contain books
+TODO: make border color match the color of the spine */
