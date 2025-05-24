@@ -1,6 +1,8 @@
 .page-layout {
     display: grid;
-    grid-template-columns: 2fr, 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+
     gap: 2rem;
     padding-top: 1rem;
     width: 100%;
@@ -11,25 +13,38 @@
 .bookshelf-container {
     padding: 1rem;
     border-radius: 8px;  
-    grid-column: 1/2;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+
+    width: 100%;
+    max-width: 70%;
+    height: auto;
+    justify-self: center;
+    /* overflow: visible; */
 }
   
 .form-container {
     padding: 1rem;
     border-radius: 8px; 
-    grid-column: 2/3; 
+    grid-column: 2;
+    grid-row: 1/2;
+    width: 100%;
+    max-width: 70%;
+    justify-self: center;
 }
 
 @media (max-width: 768px) {
     .page-layout {
-      grid-template-columns: 1fr; /* stack columns vertically */
+      grid-template-columns: 1fr; 
+    grid-template-rows: auto auto;
     }
     .bookshelf-container {  
         grid-column: 1/2;
+        grid-row: auto;
     }
     .form-container {
         grid-column: 1/2;
-        grid-row: 2/3; 
+        grid-row: auto; 
     }
 
 }
@@ -42,10 +57,10 @@
 .library-header {
     font-family: 'Times New Roman', Times, serif;
     /* font-size: 2rem; */
-    background-color: #9896f1;
+    background-color: #b4dfe5;
     padding: 10px;
-    border-top: 4px solid #574b9b;
-    border-bottom: 4px solid #574b9b;
+    border-top: 4px solid #303c6c;
+    border-bottom: 4px solid #303c6c;
     color: #272343;
     text-align: center;
     /* margin: 0; */
@@ -59,7 +74,7 @@
     flex-direction: column;
     /* justify-content: center; */
     background-color: #7a4a3b;
-    border: 15px solid #6a3d2e;
+    border: 1px solid #6a3d2e;
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -78,8 +93,11 @@
     /* flex-direction: row; */
     align-items: flex-end; 
     /* position: relative; */
+    justify-content: flex-start;
+    position: relative;
+    padding: 0;
     width: 100%;
-    height: 200px;
+    height: 150px;
     /* text-align: center; */
     border-radius: 5px;
     background-color: #ac8b76;

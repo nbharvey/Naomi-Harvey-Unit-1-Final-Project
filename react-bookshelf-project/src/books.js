@@ -3,7 +3,7 @@ const books = [
         id: "1",
         title: "Colorado's Fourtneers",
         author: "Gerry Roach",
-        coverUrl: "",
+        coverUrl: "/colorado.png",
         spineColor: "#00bbf0",
         status: "Adventure Mode",
         description: "Mountaineering book with maps and route info necessary to climb all 53 of Colorado's 14,000' mountains.",
@@ -12,7 +12,7 @@ const books = [
         id: "2",
         title: "Things Fall Apart",
         author: "Chinua Achebe",
-        coverUrl: "",
+        coverUrl: "/thingsfallapart.png",
         spineColor: "#ffc93c",
         status: "Global Voices",
         description: "Things Fall Apart by Chinua Achebe is a novel set in pre-colonial Nigeria that follows the tragic downfall of Okonkwo as British colonization and Christianity begin to disrupt traditional Igbo society in late 19th-century Africa.",
@@ -117,7 +117,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "7",
+        id: "14",
         title: "Random Title",
         author: "Neil deGrasse Tyson",
         coverUrl: "",
@@ -126,7 +126,7 @@ const books = [
         description: "",
     },
     {
-        id: "8",
+        id: "15",
         title: "Random Title Random Title",
         author: "Random Author",
         coverUrl: "",
@@ -135,7 +135,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "9",
+        id: "16",
         title: "Random",
         author: "Random Author",
         coverUrl: "",
@@ -144,7 +144,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "10",
+        id: "17",
         title: "Rand",
         author: "Random Author",
         coverUrl: "",
@@ -153,7 +153,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "11",
+        id: "18",
         title: "Random Title Title",
         author: "Random Author",
         coverUrl: "",
@@ -162,7 +162,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "12",
+        id: "19",
         title: "Rando",
         author: "Random Author",
         coverUrl: "",
@@ -171,7 +171,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "13",
+        id: "20",
         title: "Random Title",
         author: "Random Author",
         coverUrl: "",
@@ -180,7 +180,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "12",
+        id: "21",
         title: "Rando",
         author: "Random Author",
         coverUrl: "",
@@ -189,7 +189,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "13",
+        id: "22",
         title: "Random Title",
         author: "Random Author",
         coverUrl: "",
@@ -198,7 +198,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "12",
+        id: "23",
         title: "Rando",
         author: "Random Author",
         coverUrl: "",
@@ -207,7 +207,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "13",
+        id: "24",
         title: "Random Title",
         author: "Random Author",
         coverUrl: "",
@@ -216,7 +216,7 @@ const books = [
         description: "Testing",
     },
     {
-        id: "12",
+        id: "25",
         title: "Rando",
         author: "Random Author",
         coverUrl: "",
@@ -224,15 +224,7 @@ const books = [
         status: "",
         description: "Testing",
     },
-    {
-        id: "13",
-        title: "Random Title",
-        author: "Random Author",
-        coverUrl: "",
-        spineColor: "",
-        status: "",
-        description: "Testing",
-      },
+    
 ]
 
-export default books
+export default books;

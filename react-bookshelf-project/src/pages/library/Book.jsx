@@ -1,34 +1,57 @@
+// import "./Book.css";
+
+// function Book({books}) {
+//   return (
+//     <>
+//       {books.map((book, index) => (
+//         <div
+//           key={index}
+//           className="spine"
+//               style={{ backgroundColor: book.spineColor }}
+//           >
+//           <h3>{book.title}</h3>
+//         </div>
+//       ))}
+//       </>
+//   );
+// }
+
+// export default Book;
+
+
+import {useState} from 'react'
 import "./Book.css";
 
-function Book({books}) {
+function Book({ books }) {
+  // const [displayCover, setDisplayCover] = useState(null)
+  const [selectedBook, setSelectedBook] = useState(null)
+
+const handleClick = (book) => {
+  setSelectedBook(prev => (prev === book ? null : book));
+}
+
   return (
     <>
-      {books.map((book) => (
+      {books.map((book, index) => (
         <div
-          key={book.id}
+          key={index}
           className="spine"
-              style={{ backgroundColor: book.spineColor }}
+          onClick={() => handleClick(book)}
+          style={{ backgroundColor: book.spineColor }}
+
           >
-          <h2>{book.title}</h2>
+          <h3>{book.title}</h3>
         </div>
       ))}
+
+      {selectedBook && (
+        <div className="book-cover"
+          style={{ marginTop: '20px' }}>
+          <img src={selectedBook.coverUrl} alt={selectedBook.title} />
+              </div>
+      )}
       </>
   );
 }
 
 export default Book;
-
-// TODO: decide where to display the inner content of the books and where to handle the click functionality
-
-// <div className="container">
-//   <div className="box" id="box1">
-//     {books.map((book) => (
-//       <div key={book.id} className="spine" style={{ backgroundColor: book.spineColor }}>
-//         <h2>{book.title}</h2>
-//       </div>
-//     ))}
-//   </div>
-//   <div className="box" id="box2"></div>
-//   <div className="box" id="box3"></div>
-//   <div className="box" id="box4"></div>
-// </div>

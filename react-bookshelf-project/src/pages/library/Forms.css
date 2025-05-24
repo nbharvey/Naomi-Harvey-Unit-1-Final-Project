@@ -1,0 +1,27 @@
+.form {
+    border: 2px solid #303c6c;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    background-color: #f4976c;
+    color: #303c6c;
+    border-radius: 5px;
+  
+}
+
+.form-submit {
+    background-color: #303c6c;
+    border: 2px solid #b4dfe5;
+    color: #e7e4d4;
+    border-radius: 5px;
+
+}
+
+input {
+    border-radius: 5px;
+}
+
+textarea {
+    border-radius: 5px;
+}

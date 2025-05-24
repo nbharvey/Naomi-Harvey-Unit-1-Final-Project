@@ -3,17 +3,33 @@ import books from "../../books"
 import Form from "./Form";
 import '../../index.css'
 import './Bookshelf.css'
+import {useState, useMemo, useEffect} from 'react'
+
+function createShelf(b, booksPerShelf) {
+  const shelf = [];
+  for (let i = 0; i < b.length; i += booksPerShelf) {
+    shelf.push(b.slice(i, i + booksPerShelf));
+  }
+  return shelf;
+}
+
 
 function Bookshelf() {
-  function createShelf(books, booksPerShelf) {
-    const shelf = [];
-    for (let i = 0; i < books.length; i += booksPerShelf) {
-      shelf.push(books.slice(i, i + booksPerShelf));
+  const [currentBooks, setCurrentBooks] = useState(books)
+
+  // const shelves = createShelf(currentBooks, 10);
+
+  const shelves = useMemo(() => {
+    return createShelf(currentBooks, 15)
+  }, [currentBooks])
+
+  const addNewBook = function (book) {
+    if (!book.spineColor) {
+      book.spineColor = 'blue';
     }
-    return shelf;
+    setCurrentBooks((prevBooks) => [...prevBooks, book]
+  )
   }
-    
-  const shelves = createShelf(books, 6);
 
   return (
     <>
@@ -31,7 +47,7 @@ function Bookshelf() {
             </div>
           </div>
         <div className="form-container">
-          <Form />
+          <Form onFormSubmit={addNewBook}/>
         </div>
       </div>
     </>

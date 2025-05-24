@@ -1,20 +1,19 @@
 .header {
-    background-color: #9896f1;
+    background-color: #b4dfe5;
     padding: 10px;
-    border-top: 4px solid #574b9b;
-    border-bottom: 4px solid #574b9b;
-    border-right: 4px dashed #574b9b;
-    border-left: 4px dashed #574b9b;
+    border-top: 4px solid #303c6c;
+    border-bottom: 4px solid #303c6c;
     text-align: center;
+    display: block;
+
 }
 
 #h1 {
-    background-color: #edb1f1;
     padding: 10px 5%;
-    color: #272343;
-    border: 2px dashed #574b9b;
+    color: #303c6c;
     text-align: center;
     display: block;
+    font-style: italic;
 }
 
 .profile-pic {
@@ -22,6 +21,5 @@
     width: 100px;
     height: 100px;
     float: left;
-    /* display: flex; */
     margin-left: 0px;
 }

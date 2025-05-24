@@ -5,31 +5,11 @@ function Navbar() {
 
     return (
         <nav className='navbar'>
-          <NavLink id="navlink" to="/">Home</NavLink>
-          <NavLink id="navlink" to="/library">Library</NavLink>
-          <NavLink id="navlink" to="/about">About</NavLink>
+          <NavLink to="/" className={({ isActive }) => isActive ? 'active-link' : ''}>Home</NavLink>
+          <NavLink to="/library" className={({ isActive }) => isActive ? 'active-link' : ''}>Library</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'active-link' : ''}>About</NavLink>
         </nav>
     )
 }
-
-
-
-        {/* <div>
-        <h1>Naomi's Digital Playground</h1>
-        <div class="profileHeading">
-          <img src="./profilePic.png" class="profile-pic" alt="Animation of Naomi" /> 
-          <h2>About Naomi</h2>    
-        </div>
-         
-        <div class="top">
-        <nav class="navbar-fixed">
-          <ul>
-            <li class="li-nav"><a href="./careerGoals.html">Career Goals</a></li>
-            <li class="li-nav"><a href="./projects.html">Projects</a></li>
-          </ul>
-        </nav>
-      </div>
-
-    </div>  */}
 
 export default Navbar
