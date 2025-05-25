@@ -94,7 +94,7 @@ function Form({onFormSubmit}) {
            
             </div>
           <button type="submit" className="form-submit"
-          >Add book to the shelf</button>
+          >Add book</button>
         </form>
         <UserData data={submittedData} />
       </div>

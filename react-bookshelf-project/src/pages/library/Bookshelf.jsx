@@ -1,4 +1,5 @@
-import Book from "./Book"
+// import Book from "./Book"
+import Modal from "./Modal";
 import books from "../../books"
 import Form from "./Form";
 import '../../index.css'
@@ -42,7 +43,7 @@ function Bookshelf() {
           <div className="bookshelf">
               {shelves.map((shelf, i) => (
                 <div key={i} className="shelf">
-                  <Book books={shelf} />
+                  <Modal books={shelf} />
                 </div>
               ))}
             </div>

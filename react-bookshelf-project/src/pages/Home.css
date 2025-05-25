@@ -1,0 +1,21 @@
+.homepage {
+
+margin: 0;
+padding: 0;
+background-image: url('flowers.png'); /* replace with your path */
+/* background-size: cover;       stretch to cover the screen */
+background-position: center;  /* center the image */
+background-repeat: no-repeat; /* no tiling */
+/* height: 100vh; */
+}
+
+
+
+.wildflowers {
+ /* top: 0;
+  left: 0; */
+  /* width: 100vw;
+  height: 100vh; */
+  object-fit: cover;
+  z-index: -1;
+}
