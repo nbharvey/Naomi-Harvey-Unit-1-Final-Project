@@ -17,7 +17,6 @@ const handleClick = (book) => {
           className="spine"
           onClick={() => handleClick(book)}
           style={{ backgroundColor: book.spineColor }}
-
           >
           <h3>{book.title}</h3>
         </div>
