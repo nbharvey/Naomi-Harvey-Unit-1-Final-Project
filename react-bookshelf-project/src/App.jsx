@@ -6,6 +6,7 @@ import "./index.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import PageNotFound from './components/404Page';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/library" element={<Bookshelf />} />
-          <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<PageNotFound />} />
+  
       </Routes>
       <Footer />
     </>

@@ -1,7 +1,7 @@
 .navbar {
     background-color: #b4dfe5;
     color: #303c6c;
-    padding: 10px;
+    padding-bottom: 10px;
     border-bottom: 4px solid #303c6c;
     text-align: center;
     justify-content: center;
@@ -9,28 +9,95 @@
     font-size: 20px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    justify-self: center;
-    width: 100vw;
+    grid-auto-flow: column; 
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.navbar a {
+a {
+    text-decoration: none;
+}
+
+a:visited,
+a:active {
+  color: #303c6c;
+  text-decoration: none;
+}
+
+.nav-links {
     padding: 5px;
-    list-style: none;
+}
+
+.nav-links:hover {
+    background-color: #f4976c;
+    border-radius: 20px;
+    padding: 5px;
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-label {
+    cursor: pointer;
+    background-color: #b4dfe5;
+    border-radius: 20px;
+    padding: 5px;
+    color: #303c6c;
+    font-family: 'Literata';
+    font-size: 20px;
+    transition: background-color 0.5s ease;
+    display: inline-block;
+  }
+  
+  .dropdown-label:hover {
+    background-color: #f4976c;
+    border-radius: 20px;
+    padding: 5px;
+  }
+  
+  .ul-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #b4dfe5;
+    min-width: 160px;
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+  }
+  
+  .dropdown:hover .ul-dropdown {
+    display: block;
+  }
+  
+  .ul-dropdown li {
+    padding: 5px 0;
+  }
+  
+  .ul-dropdown li a {
     color: #303c6c;
     text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .ul-dropdown li a:hover {
+    background-color: #f4976c;
     border-radius: 20px;
-}
-
-.navbar a:hover {
-    text-decoration: none;
-    background-color: #f4976c;
-    transition: background-color 0.5s ease;
-}
-
-.active-link {
-    font-weight: bold;
-    text-decoration: underline;
-    background-color: #f4976c;
+    padding: 5px;
   }
 
+  .active-link {
+    text-decoration: none;
+    background-color: #f4976c;
+    border-radius: 20px;
+    padding: 5px;
+  }
