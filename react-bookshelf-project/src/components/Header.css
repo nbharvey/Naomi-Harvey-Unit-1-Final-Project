@@ -2,10 +2,11 @@
     background-color: #b4dfe5;
     padding: 10px;
     border-top: 4px solid #303c6c;
-    border-bottom: 4px solid #303c6c;
+    border-bottom: 4px solid #b4dfe5;
     text-align: center;
+    justify-content: center;
     display: block;
-
+    font-size: 20px;
 }
 
 #h1 {
@@ -18,8 +19,9 @@
 
 .profile-pic {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 160;
+    height: 160px;
     float: left;
     margin-left: 0px;
+    box-sizing: border-box;    
 }

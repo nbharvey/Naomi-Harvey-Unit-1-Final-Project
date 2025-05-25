@@ -1,24 +1,3 @@
-// import "./Book.css";
-
-// function Book({books}) {
-//   return (
-//     <>
-//       {books.map((book, index) => (
-//         <div
-//           key={index}
-//           className="spine"
-//               style={{ backgroundColor: book.spineColor }}
-//           >
-//           <h3>{book.title}</h3>
-//         </div>
-//       ))}
-//       </>
-//   );
-// }
-
-// export default Book;
-
-
 import {useState} from 'react'
 import "./Book.css";
 

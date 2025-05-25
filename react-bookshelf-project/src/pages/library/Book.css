@@ -37,42 +37,23 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* flex: auto; */
-
-    /* max-width: calc(100% / 6);
-    max-height: 120px; */
     width: clamp(16px, 4vw, 28px);
     max-height: 120px;
-
     flex-wrap: nowrap;
     text-wrap: wrap;
-    /* position: relative; */
-    /* bottom: 0; */
     writing-mode: vertical-rl;
     text-align: center;
-
-    /* overflow-wrap: break-word; */
-    /* word-break: break-word; */
-    /* white-space: normal; */
     overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  word-break: break-word;
-  hyphens: auto;
-box-sizing: border-box;
-    /* padding: 5px; */
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
     padding-top: 2px;
-    
     background-color: #66bfbf;
-    
     font-size: clamp(10px, 2vw, 12px);
     margin: 2px;
     margin-bottom: 0;
-    /* border: 1px solid black; */
-    border-radius: 5px;
-    font-family:'Times New Roman', Times, serif;
-    /* width: auto; */
-    /* max-width: fit-content; */
 }
 
 .book-cover img {
@@ -82,12 +63,11 @@ box-sizing: border-box;
     display: flex;
     align-items: flex-start;
     box-sizing: border-box;
-
 }
 
 .spine:hover {
     cursor: pointer;
-    transform: translateX(0px) rotate(5deg); /* Adjust values as needed */
+    transform: translateX(0px) rotate(5deg);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -99,7 +79,7 @@ box-sizing: border-box;
     overflow-wrap: break-word;
     word-break: break-word;
     hyphens: auto;
-    font-size: inherit; /* inherit size from .spine */
+    font-size: inherit;
     text-align: center;
     line-height: 1.2;
   }

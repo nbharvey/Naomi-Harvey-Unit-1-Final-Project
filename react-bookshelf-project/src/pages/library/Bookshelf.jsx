@@ -20,12 +20,12 @@ function Bookshelf() {
   // const shelves = createShelf(currentBooks, 10);
 
   const shelves = useMemo(() => {
-    return createShelf(currentBooks, 15)
+    return createShelf(currentBooks, 12)
   }, [currentBooks])
 
   const addNewBook = function (book) {
     if (!book.spineColor) {
-      book.spineColor = 'blue';
+      book.spineColor = '#66bfbf';
     }
     setCurrentBooks((prevBooks) => [...prevBooks, book]
   )
@@ -35,10 +35,11 @@ function Bookshelf() {
     <>
           <div className="library-header-wrapper">
             <h2 className="library-header">Naomi's Bookshelf</h2>
-          </div>
+      </div>
           <div className="page-layout">
-            <div className="bookshelf-container">
-              <div className="bookshelf">
+        <div className="bookshelf-container">
+        <img src="/plants.png" className="plants" alt="plants" />            
+          <div className="bookshelf">
               {shelves.map((shelf, i) => (
                 <div key={i} className="shelf">
                   <Book books={shelf} />
@@ -47,6 +48,7 @@ function Bookshelf() {
             </div>
           </div>
         <div className="form-container">
+        <img src="./coffeeonbooks.png" className="coffee-on-books" alt="Coffee on Books" />            
           <Form onFormSubmit={addNewBook}/>
         </div>
       </div>

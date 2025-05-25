@@ -12,7 +12,6 @@ function App() {
     <>
       <Header />
       <Navbar />
-  
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/library" element={<Bookshelf />} />
