@@ -9,6 +9,8 @@
 .form-submit:hover {
     text-decoration: none;
     background-color: #A89F91;
+    border: 2px solid #A89F91;
+
     transition: background-color 0.5s ease; 
   
 }
