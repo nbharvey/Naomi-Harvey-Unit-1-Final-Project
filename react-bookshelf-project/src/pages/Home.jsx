@@ -4,6 +4,7 @@ import './Home.css'
 function Home() {
 
     return (
+        <>
         <div className='homepage'>
             <h2 className='home-heading-main'>Welcome to my digital playground, where the ideas in my head come to life in code.</h2>
             <div className='para'>
@@ -26,7 +27,8 @@ function Home() {
                     </Shimmer>
             </div>
            
-        </div> 
+            </div> 
+            </>
     )
 }
 
