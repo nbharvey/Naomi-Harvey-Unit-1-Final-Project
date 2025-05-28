@@ -1,28 +1,45 @@
-// import {useState} from 'react'
-// import "./Book.css";
-// import Modal from './Modal';
+import "./Book.css";
+import Button from "../../components/Button";
 
-// function Book({ books}) {
-//   // const [displayCover, setDisplayCover] = useState(null)
-//   const [selectedBook, setSelectedBook] = useState(null)
 
-// const handleClick = (book) => {
-//   setSelectedBook(prev => (prev === book ? null : book));
-// }
+function Book({book, toggleModal, isOpen}) {
 
-//   return (
-//     <>
-    
-//       ))}
+  return (
+    <>
+     
+                <div>
+                    <div
+                        className="spine"
+                        onClick={() => toggleModal(book)}
+                        style={{ backgroundColor: book.spineColor }}
+                    >
+                        <h3>{book.title}</h3>
+                    </div>
+      
+                    {isOpen && (
+                        <div className="modal">
+                        <div className='modal-content' >
+                                    <div onClick={toggleModal} className="overlay" >
+                                        <ul className='book-content'>
+                                    <li><h2 id="open-book-header" style={{backgroundColor: book.spineColor}}>{book.title}</h2></li>
+                                    <li><p id="genre">Genre: {book.status}</p></li>
+                                    <li><p>TL;DR: {book.description}</p></li>
+                                            <li>
+                                                <Button onClick={() => toggleModal(book)}>
+                                                    Return book to library 
+                                                </Button>
+                                            </li>
+                                            </ul>
+                                    </div>
+                            </div>
+                            </div>
+                    )}
+                </div>
+            
+      </>
+  );
+}
 
-//       {/* v
-//         <div className="book-cover"
-//           style={{ marginTop: '20px' }}>
-//           <img src={seleåå÷ctedBook.coverUrl} alt={selectedBook.title} />
-//               </div>
-//       )} */}
-//       </>
-//   );
-// }
+export default Book;
 
-// export default Book;
+

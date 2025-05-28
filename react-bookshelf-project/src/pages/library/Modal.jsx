@@ -1,7 +1,6 @@
-import { useState } from 'react'
-// import Book from './Book'
+import { useState } from 'react';
 import "./Book.css";
-import Button from '../../components/Button';
+import Book from './Book';
 
 function Modal({ books }) {
     const [modal, setModal] = useState(null);
@@ -18,37 +17,13 @@ function Modal({ books }) {
 
     return (
         <>
-            {books.map((book, index) => (
-                <div key={index}>
-                    <div
-                        className="spine"
-                        onClick={() => toggleModal(book)}
-                        style={{ backgroundColor: book.spineColor }}
-                    >
-                        <h3>{book.title}</h3>
-                    </div>
-      
-                    {modal?.title === book.title && (
-                        <div className="modal">
-                        <div key={index}>
-                        <div className='modal-content' >
-                                    <div onClick={toggleModal} className="overlay" >
-                                        <ul className='book-content'>
-                                    <li><h2 id="open-book-header" style={{backgroundColor: book.spineColor}}>{book.title}</h2></li>
-                                    <li><p id="genre">Genre: {book.status}</p></li>
-                                    <li><p>TL;DR: {book.description}</p></li>
-                                            <li>
-                                                <Button onClick={() => toggleModal(book)}>
-                                                    Return book to library 
-                                                </Button>
-                                            </li>
-                                            </ul>
-                                    </div>
-                            </div>
-                            </div>
-                            </div>
-                    )}
-                </div>
+            {books.map((book) => (
+                <Book 
+                    key={book.id}
+                    book={book}
+                    toggleModal={toggleModal}
+                    isOpen={modal?.title === book.title}
+                />
             ))}
         </>
     );
