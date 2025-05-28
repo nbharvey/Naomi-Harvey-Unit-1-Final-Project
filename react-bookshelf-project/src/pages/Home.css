@@ -1,21 +1,30 @@
 .homepage {
+  background-color: #fdf9f2;
+  color: #333333;
 
 margin: 0;
 padding: 0;
-background-image: url('flowers.png'); /* replace with your path */
 /* background-size: cover;       stretch to cover the screen */
 background-position: center;  /* center the image */
 background-repeat: no-repeat; /* no tiling */
 /* height: 100vh; */
 }
 
+.home-heading-main {
+color: #333333;
+text-align: center;
+}
+
+.home-header {
+background-color: #fdf9f2;
+color: #333333;
+border-bottom: 2px dashed #697C67; 
 
 
-.wildflowers {
- /* top: 0;
-  left: 0; */
-  /* width: 100vw;
-  height: 100vh; */
-  object-fit: cover;
-  z-index: -1;
+}
+
+.para {
+  background-color: #fdf9f2;
+color: #333333;
+
 }

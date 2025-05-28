@@ -16,11 +16,13 @@ function Navbar() {
           </div>
 
   <div className="nav-item dropdown">
-          <span className="dropdown-label">About           <i class="fa-solid fa-circle-chevron-down"></i>
+          <span className="dropdown-label">About           <i className="fa-solid fa-circle-chevron-down"></i>
 </span>
     <ul className="ul-dropdown">
       <li><Link to="/aboutnaomi">About Naomi</Link></li>
       <li><Link to="/aboutprojects">About Projects</Link></li>
+      <li><Link to="/resume">Resume</Link></li>
+            
     </ul>
   </div>
 </nav>

@@ -1,28 +1,33 @@
 .header {
-    background-color: #b4dfe5;
-    /* background-image: url('flowers.png'); */
-    padding: 10px;
-    border-top: 4px solid #303c6c;
-    border-bottom: 4px solid #b4dfe5;
+    background-color: #fdf9f2;
+    background-image: url('stars.png');
+    padding: 30px;
+    border-top: 4px solid #697C67;
     text-align: center;
     justify-content: center;
     display: block;
     font-size: 20px;
 }
 
-#h1 {
-    padding: 10px 5%;
-    color: #303c6c;
+span#h1 {
+    /* padding: 10px 5%; */
+    color: #333333;
     text-align: center;
     display: block;
     font-style: italic;
+    background-color: #fdf9f2;
+    padding-left: 0;
 }
 
 .profile-pic {
     border-radius: 50%;
+    border: 2px solid #697C67;
     width: 160;
     height: 160px;
     float: left;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-left: 20px;
     margin-left: 0px;
     box-sizing: border-box;    
 }

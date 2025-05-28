@@ -7,6 +7,8 @@
     width: 100%;
     box-sizing: border-box;
     margin: 0;
+      background-color: #e7e3d4;
+
 }
 
 .bookshelf-container {
@@ -30,10 +32,14 @@
     max-width: 90%;
     justify-self: center;
     position: relative;
+    margin-bottom: 150px;
+
 }
 
 .library-header-wrapper {
     width: 100%;
+    background-color: #e7e3d4;
+
 }
 
 .library-header {

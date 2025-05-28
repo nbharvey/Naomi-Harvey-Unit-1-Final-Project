@@ -3,11 +3,17 @@ import { useState } from 'react'
 import "./Book.css";
 
 function Modal({ books }) {
-    const [modal, setModal] = useState(false);
+    const [modal, setModal] = useState(null);
 
     const toggleModal = (book) => {
-        setModal(!modal);
+        if (modal && book?.title === modal.title) {
+            setModal(null);
+        } else {
+            setModal(book);
+        }
     };
+
+    //TODO: close books when click on new book
 
     return (
         <>
@@ -21,17 +27,20 @@ function Modal({ books }) {
                         <h3>{book.title}</h3>
                     </div>
       
-                    {modal && (
+                    {modal?.title === book.title && (
                         <div className="modal">
                         <div key={index}>
-
-                            <div onClick={toggleModal} className="overlay"></div>
-                            <div className="modal-content">
-                                    <h2>{book.title}</h2>
-                                <p>idkidkdidkdidkdidkdidkdidk</p>
-                                <button className="close-modal" onClick={() => toggleModal(book)}>
+                        <div className='modal-content' >
+                                    <div onClick={toggleModal} className="overlay" >
+                                        <ul className='book-content'>
+                                    <li><h2 id="open-book-header" style={{backgroundColor: book.spineColor}}>{book.title}</h2></li>
+                                    <li><p id="genre">Genre: {book.status}</p></li>
+                                    <li><p>TL;DR: {book.description}</p></li>
+                                    <li><button className="close-modal" style={{backgroundColor: book.spineColor}} onClick={() => toggleModal(book)}>
                                     Return to library
-                                </button>
+                                            </button></li>
+                                            </ul>
+                                    </div>
                             </div>
                             </div>
                             </div>

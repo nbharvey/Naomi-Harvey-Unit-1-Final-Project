@@ -3,6 +3,7 @@ import UserData from './UserData'
 import '../../index.css'
 import './Forms.css'
 import { useState } from 'react'
+import Shimmer from '../../components/Shimmer';
 
 function Form({onFormSubmit}) {
   const [formData, setFormData] = useState({
@@ -31,7 +32,6 @@ function Form({onFormSubmit}) {
   return (
     <>
       <div>
-            
         <form className='form' onSubmit={handleSubmit}>
           <h3>Leave a book recommendation for Naomi!</h3>
           <div className='form-shelf'>
@@ -92,9 +92,11 @@ function Form({onFormSubmit}) {
             />
             </label>
            
-            </div>
+          </div>
+          
           <button type="submit" className="form-submit"
-          >Add book</button>
+            >Add book</button>
+            
         </form>
         <UserData data={submittedData} />
       </div>

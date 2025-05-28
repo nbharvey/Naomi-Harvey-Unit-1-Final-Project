@@ -4,7 +4,7 @@ import books from "../../books"
 import Form from "./Form";
 import '../../index.css'
 import './Bookshelf.css'
-import {useState, useMemo, useEffect} from 'react'
+import {useState, useMemo} from 'react'
 
 function createShelf(b, booksPerShelf) {
   const shelf = [];

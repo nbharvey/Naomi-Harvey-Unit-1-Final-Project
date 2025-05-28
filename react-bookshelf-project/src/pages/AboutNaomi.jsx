@@ -3,7 +3,7 @@ import './AboutNaomi.css'
 function AboutNaomi() {
 
     return (
-        <div>
+        <div className='aboutnaomi'>
       <img
         src="./globe.png"
                 alt="Animation of Naomi"

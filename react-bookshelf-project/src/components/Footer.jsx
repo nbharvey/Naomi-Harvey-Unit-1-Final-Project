@@ -1,4 +1,6 @@
 import './Footer.css'
+import Shimmer from './Shimmer'
+import {Link} from 'react-router-dom'
 
 function Footer() {
 
@@ -6,7 +8,8 @@ function Footer() {
       
       <div className='footer'>
         <div id="copyright">
-          <small><i class="fa-solid fa-copyright"></i>     2025 Naomi Harvey</small>
+          <small><i className="fa-solid fa-copyright"></i>     2025 Naomi Harvey</small>
+          
         </div>
         
         <div id="location">
@@ -15,15 +18,17 @@ function Footer() {
       
         <div className='list'>
   <a href="https://github.com/nbharvey" target='_blank'>
-    <i class="fa-brands fa-github"></i>
+    <i className="fa-brands fa-github"></i>
   </a>
  |
-  <a href="www.linkedin.com/in/naomi-harvey-masters-in-education-and-self-taught-software-developer" target='_blank'>
-    <i class="fa-brands fa-linkedin-in"></i>
+  <a href="https://www.linkedin.com/in/naomi-harvey-masters-in-education-and-self-taught-software-developer" target='_blank'>
+    <i className="fa-brands fa-linkedin-in"></i>
   </a>
  |
-  <a href="" target='_blank' className='Resume'>Resume</a>
-</div>
+          <Link to="./resume" className='resume'>Resume</Link>
+          
+        </div>
+        
         </div>
     )
 }
