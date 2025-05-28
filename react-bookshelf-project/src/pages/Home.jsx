@@ -1,3 +1,4 @@
+import Shimmer from '../components/Shimmer'
 import './Home.css'
 
 function Home() {
@@ -15,8 +16,14 @@ function Home() {
   <h4 className='home-header'>LaunchCode</h4>
   <p className='para'>
     Currently I'm taking a Software Development program through LaunchCode, a non-profit that works to prepare software developers for engineering roles. The course I'm taking is a four month, 40 hour a week course that covers full stack development.
-
-  </p>
+</p>
+                <Shimmer>
+                <div className='launchcode-mission'>
+                <i className="fa-solid fa-rocket"></i>
+                <a href="https://www.launchcode.org/about" target='_blank'>Check out LaunchCode's mission here!     
+                    </a>
+                    </div>
+                    </Shimmer>
             </div>
            
         </div> 

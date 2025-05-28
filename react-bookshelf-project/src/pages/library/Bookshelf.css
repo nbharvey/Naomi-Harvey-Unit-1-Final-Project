@@ -7,8 +7,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 0;
-      background-color: #e7e3d4;
-
+    background-color: #e7e3d4;
 }
 
 .bookshelf-container {
@@ -16,7 +15,7 @@
     grid-column: 1;
     grid-row: 1 / span 2;
     width: 100%;
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     justify-self: center;
     padding-top: 100px;
@@ -29,26 +28,23 @@
     grid-column: 2;
     grid-row: 1/2;
     width: 100%;
-    max-width: 90%;
+    max-width: 100%;
     justify-self: center;
     position: relative;
     margin-bottom: 150px;
-
 }
 
 .library-header-wrapper {
     width: 100%;
     background-color: #e7e3d4;
-
 }
 
 .library-header {
     padding: 10px;
-    border-top: 4px solid #7a4a3b;
-    border-bottom: 4px solid #7a4a3b;
-    color: #7a4a3b;
+    border-top: 4px solid #6B2F4E;
+    border-bottom: 4px solid #6B2F4E;
+    color: #6B2F4E;
     text-align: center;
-    
   }
 
 .bookshelf {
@@ -81,20 +77,20 @@
 
 .plants {
     position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px; 
-  z-index: 2;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 225px; 
+    z-index: 2;
 }
 
 .coffee-on-books {
-position: absolute;
-  top: -49px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 142px; 
-  z-index: 2;
+    position: absolute;
+    top: -49px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 142px; 
+    z-index: 2;
 }
 
 @media (max-width: 768px) {

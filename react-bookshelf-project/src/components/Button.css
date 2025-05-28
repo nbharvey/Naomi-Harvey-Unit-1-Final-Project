@@ -1,6 +1,6 @@
 .form-submit {
     background-color: #6B2F4E;
-    color: #fdf9f2;
+    color: #e7e3d4;
     border: 2px solid #6B2F4E;
     height: 25px;
     font-family: 'Literata';
@@ -10,7 +10,7 @@
     text-decoration: none;
     background-color: #A89F91;
     border: 2px solid #A89F91;
-
+    color: #333333;
     transition: background-color 0.5s ease; 
   
 }

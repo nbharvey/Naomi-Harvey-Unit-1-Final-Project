@@ -1,30 +1,43 @@
 .homepage {
   background-color: #fdf9f2;
   color: #333333;
-
-margin: 0;
-padding: 0;
-/* background-size: cover;       stretch to cover the screen */
-background-position: center;  /* center the image */
-background-repeat: no-repeat; /* no tiling */
-/* height: 100vh; */
+  margin: 0;
+  padding: 0;
+  background-position: center;  
+  background-repeat: no-repeat; 
 }
 
 .home-heading-main {
-color: #333333;
-text-align: center;
+  color: #333333;
+  text-align: center;
 }
 
 .home-header {
-background-color: #fdf9f2;
-color: #333333;
-border-bottom: 2px dashed #697C67; 
-
-
+  background-color: #fdf9f2;
+  color: #333333;
+  border-bottom: 2px dashed #697C67; 
 }
 
 .para {
   background-color: #fdf9f2;
-color: #333333;
-
+  color: #333333;
 }
+
+.launchcode-mission{
+  border: 2px solid #697C67;
+  background-color: #fdf9f2;
+  padding: 5px;
+  color: #fdf9f2;
+  text-align: center;
+}
+
+.launchcode-mission:hover {
+  background-color: #A89F91;
+  border: 2px solid #A89F91;
+  transition: background-color 0.5s ease; 
+}
+
+i.fa-solid.fa-rocket {
+  color: #6B2F4E;
+}
+

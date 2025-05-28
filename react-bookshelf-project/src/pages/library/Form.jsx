@@ -48,7 +48,8 @@ function Form({onFormSubmit}) {
               id="title"
               name="title"
               value={formData.title}
-              onChange={handleChange}
+                onChange={handleChange}
+                required
             />
             </label>
             </div>
@@ -62,7 +63,8 @@ function Form({onFormSubmit}) {
               id="author"
               name="author"
               value={formData.author}
-              onChange={handleChange}
+                onChange={handleChange}
+                required
             />
             </label>
             </div>
@@ -88,7 +90,8 @@ function Form({onFormSubmit}) {
               id="name"
               name="name"
               value={formData.name}
-              onChange={handleChange}
+                onChange={handleChange}
+                required
             />
             </label>
            
