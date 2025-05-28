@@ -18,8 +18,6 @@ function createShelf(b, booksPerShelf) {
 function Bookshelf() {
   const [currentBooks, setCurrentBooks] = useState(books)
 
-  // const shelves = createShelf(currentBooks, 10);
-
   const shelves = useMemo(() => {
     return createShelf(currentBooks, 12)
   }, [currentBooks])

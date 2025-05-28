@@ -1,6 +1,7 @@
 import { useState } from 'react'
 // import Book from './Book'
 import "./Book.css";
+import Button from '../../components/Button';
 
 function Modal({ books }) {
     const [modal, setModal] = useState(null);
@@ -36,9 +37,11 @@ function Modal({ books }) {
                                     <li><h2 id="open-book-header" style={{backgroundColor: book.spineColor}}>{book.title}</h2></li>
                                     <li><p id="genre">Genre: {book.status}</p></li>
                                     <li><p>TL;DR: {book.description}</p></li>
-                                    <li><button className="close-modal" style={{backgroundColor: book.spineColor}} onClick={() => toggleModal(book)}>
-                                    Return to library
-                                            </button></li>
+                                            <li>
+                                                <Button onClick={() => toggleModal(book)}>
+                                                    Return book to library 
+                                                </Button>
+                                            </li>
                                             </ul>
                                     </div>
                             </div>

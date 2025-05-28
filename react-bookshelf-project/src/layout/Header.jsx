@@ -1,5 +1,5 @@
 import './Header.css'
-import Shimmer from './Shimmer'
+import Shimmer from '../components/Shimmer'
 
 function Header() {
 

@@ -3,7 +3,7 @@ import UserData from './UserData'
 import '../../index.css'
 import './Forms.css'
 import { useState } from 'react'
-import Shimmer from '../../components/Shimmer';
+import Button from '../../components/Button';
 
 function Form({onFormSubmit}) {
   const [formData, setFormData] = useState({
@@ -93,9 +93,8 @@ function Form({onFormSubmit}) {
             </label>
            
           </div>
-          
-          <button type="submit" className="form-submit"
-            >Add book</button>
+        
+          <Button>Add Book</Button>
             
         </form>
         <UserData data={submittedData} />
