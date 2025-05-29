@@ -7,6 +7,7 @@ import Footer from './layout/Footer';
 import Navbar from './layout/Navbar';
 import PageNotFound from './components/404Page';
 import AboutNaomi from './pages/AboutNaomi';
+import AboutProjects from './pages/AboutProjects';
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/library" element={<Bookshelf />} />
         <Route path="/aboutnaomi" element={<AboutNaomi />} />
+        <Route path="/aboutprojects" element={<AboutProjects />} />
         <Route path="*" element={<PageNotFound />} />
-  
+
       </Routes>
 
       <Footer />
