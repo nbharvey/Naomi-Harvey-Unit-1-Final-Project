@@ -18,7 +18,7 @@ function Modal({ books }) {
     return (
         <>
             {books.map((book) => (
-                <Book 
+                <Book
                     key={book.id}
                     book={book}
                     toggleModal={toggleModal}
@@ -30,4 +30,4 @@ function Modal({ books }) {
 }
 
 
-    export default Modal
+export default Modal

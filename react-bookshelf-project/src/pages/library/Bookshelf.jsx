@@ -4,7 +4,7 @@ import books from "../../books"
 import Form from "./Form";
 import '../../index.css'
 import './Bookshelf.css'
-import {useState, useMemo} from 'react'
+import { useState, useMemo } from 'react'
 
 function createShelf(b, booksPerShelf) {
   const shelf = [];
@@ -24,31 +24,31 @@ function Bookshelf() {
 
   const addNewBook = function (book) {
     if (!book.spineColor) {
-      book.spineColor = '#66bfbf';
+      book.spineColor = '#6B2F4E';
     }
     setCurrentBooks((prevBooks) => [...prevBooks, book]
-  )
+    )
   }
 
   return (
     <>
-          <div className="library-header-wrapper">
-            <h2 className="library-header">Naomi's Bookshelf</h2>
+      <div className="library-header-wrapper">
+        <h2 className="library-header">Naomi's Bookshelf</h2>
       </div>
-          <div className="page-layout">
+      <div className="page-layout">
         <div className="bookshelf-container">
-        <img src="/plants.png" className="plants" alt="plants" />            
+          <img src="/plants.png" className="plants" alt="plants" />
           <div className="bookshelf">
-              {shelves.map((shelf, i) => (
-                <div key={i} className="shelf">
-                  <Modal books={shelf} />
-                </div>
-              ))}
-            </div>
+            {shelves.map((shelf, i) => (
+              <div key={i} className="shelf">
+                <Modal books={shelf} />
+              </div>
+            ))}
           </div>
+        </div>
         <div className="form-container">
-        <img src="./coffeeonbooks.png" className="coffee-on-books" alt="Coffee on Books" />            
-          <Form onFormSubmit={addNewBook}/>
+          <img src="./coffeeonbooks.png" className="coffee-on-books" alt="Coffee on Books" />
+          <Form onFormSubmit={addNewBook} />
         </div>
       </div>
     </>

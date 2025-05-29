@@ -5,8 +5,7 @@ const books = [
         author: "Ernest Hemingway",
         spineColor: "#99b27f",
         status: "Classic Fiction",
-        description: "An aging fisherman engages in an epic battle with a giant marlin."
-    },
+        description: "An aging fisherman engages in an epic battle with a giant marlin."  },
     {
         id: "2",
         title: "American Dirt",
