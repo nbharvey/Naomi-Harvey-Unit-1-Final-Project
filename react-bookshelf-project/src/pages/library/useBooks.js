@@ -18,10 +18,11 @@ function useBooks() {
     }, [currentBooks])
 
     const addOrUpdateBook = function (book) {
+        book.isEditing = false;
         if (!book.spineColor) {
             book.spineColor = '#6B2F4E';
         }
-        // this checks if the current books exists in the arary
+        // this checks if the current books exists in the array
         //filtering because static books should not be allowed to be edited
         if (currentBooks.filter((b) => b.name && (b.id === book.id)).length > 0) {
             updateBook(book);
@@ -34,22 +35,33 @@ function useBooks() {
 
     function updateBook(updatedBook) {
         setCurrentBooks((prevBooks) =>
-            prevBooks.map(book =>
-                book.id === updatedBook.id ? { ...book, ...updatedBook } : book)
+            prevBooks.map(book => {
+                return book.id === updatedBook.id ? { ...book, ...updatedBook } : book
+            }
+            )
         )
     }
+
     //useMemo calculates state automatically when it's dependencies change
     //if unedfined, it will return null
     const editingBook = useMemo(() => {
-        console.log("Currently edited book changed")
+        console.log("Currently edited book changed");
         return (
             currentBooks.filter((b) => b.name && (b.isEditing))[0] ?? null
         );
     }, [currentBooks]);
 
+    function deleteBook(bookToDelete) {
+        console.log("Book is deleting");
+        setCurrentBooks((prevBooks) => {
+            return prevBooks.filter((b) => b.id !== bookToDelete.id);
+        }
+        )
+    }
+
     //returning the functions being used
     return {
-        currentBooks, shelves, addOrUpdateBook, updateBook, editingBook
+        currentBooks, shelves, addOrUpdateBook, updateBook, editingBook, deleteBook
     }
 }
 

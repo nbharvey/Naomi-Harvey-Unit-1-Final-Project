@@ -4,16 +4,16 @@ import UserData from "./UserData";
 import { useState } from 'react'
 
 
-function Book({ book, toggleModal, isOpen, formData, setFormData, updateBook }) {
+function Book({ book, toggleModal, isOpen, formData, setFormData, updateBook, deleteBook }) {
 
     const handleEdit = (e) => {
         updateBook({ ...book, isEditing: true });
         toggleModal(null);
     };
 
-    const deleteFormData = (bookToDelete) => {
-        const updatedUserBooks = formData.filter(book => book.id !== bookToDelete.id);
-        setFormData(updatedUserBooks);
+    const handleDelete = (bookToDelete) => {
+        deleteBook(bookToDelete);
+        toggleModal(null);
     };
 
     return (
@@ -53,7 +53,7 @@ function Book({ book, toggleModal, isOpen, formData, setFormData, updateBook }) 
                                     Edit book rec
                                 </Button>
 
-                                <Button onClick={() => deleteFormData(book)}>
+                                <Button onClick={() => handleDelete(book)}>
                                     Delete book
                                 </Button>
                             </>

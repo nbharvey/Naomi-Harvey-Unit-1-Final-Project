@@ -1,13 +1,11 @@
-// import Book from "./Book"
 import Shelf from "./Shelf";
-import books from "../../books"
 import Form from "./Form";
 import '../../index.css'
 import './Bookshelf.css'
 import useBooks from "./useBooks";
 
 function Bookshelf() {
-  const { currentBooks, shelves, addOrUpdateBook, updateBook, editingBook } = useBooks();
+  const { currentBooks, shelves, addOrUpdateBook, updateBook, editingBook, deleteBook } = useBooks();
 
   return (
     <>
@@ -20,7 +18,7 @@ function Bookshelf() {
           <div className="bookshelf">
             {shelves.map((shelf, i) => (
               <div key={i} className="shelf">
-                <Shelf books={shelf} updateBook={updateBook} />
+                <Shelf books={shelf} updateBook={updateBook} deleteBook={deleteBook} />
               </div>
             ))}
           </div>

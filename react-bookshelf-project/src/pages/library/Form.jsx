@@ -1,5 +1,3 @@
-// import { Link } from 'react-router-dom'
-import UserData from './UserData'
 import '../../index.css'
 import './Forms.css'
 import { useEffect, useState } from 'react'
@@ -93,7 +91,7 @@ function Form({ book = defaultBook, onFormSubmit }) {
                 onChange={handleChange}
                 placeholder='I am recommending this book because...'
                 required
-                minLength={10}
+                minLength={3}
                 maxLength={200}
               />
             </label>
@@ -114,7 +112,6 @@ function Form({ book = defaultBook, onFormSubmit }) {
           </div>
           <Button>
             {book.isEditing ? ('Save Changes') : ('Add Book')}
-
           </Button>
         </form>
       </div>

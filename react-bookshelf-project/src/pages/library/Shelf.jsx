@@ -2,7 +2,7 @@ import { useState } from 'react';
 import "./Book.css";
 import Book from './Book';
 
-function Shelf({ books, updateBook }) {
+function Shelf({ books, updateBook, deleteBook }) {
     const [modal, setModal] = useState(null);
 
     const toggleModal = (book) => {
@@ -24,6 +24,7 @@ function Shelf({ books, updateBook }) {
                     toggleModal={toggleModal}
                     isOpen={modal?.title === book.title}
                     updateBook={updateBook}
+                    deleteBook={deleteBook}
                 />
             ))}
         </>
