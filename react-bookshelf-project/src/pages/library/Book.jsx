@@ -35,30 +35,42 @@ function Book({ book, toggleModal, isOpen, formData, setFormData, updateBook, de
                         {/* if there is no book.name, it evaluates to true and will display the content of the ul. */}
                         {!book.name && (
                             <div className='book-content'>
-                                <ul>
-                                    <li><h2 id="open-book-header" style={{ backgroundColor: book.spineColor }}>{book.title}</h2></li>
-                                    <li><p id="author">Author: {book.author}</p></li>
-                                    <li><p id="genre">Genre: {book.status}</p></li>
-                                    <li><p id="description">Summary: {book.description}</p></li>
-                                </ul>
+                                <div className="left-content">
+                                    <ul>
+                                        <li><h2 id="open-book-header" style={{ backgroundColor: book.spineColor }}>{book.title}</h2></li>
+                                        <li><p id="author">Author: {book.author}</p></li>
+                                        <li><p id="genre">Genre: {book.status}</p></li>
+                                    </ul>
+                                </div>
+                                <div className="right-content">
+                                    <ul>
+                                        <li><p id="description">Summary: {book.description}</p></li>
+                                    </ul>
+                                </div>
                             </div>
                         )}
 
                         {/* if there is a book.name, it will display the content of UserData. */}
+
                         {book.name && (
                             <>
                                 <UserData data={book} />
+                                <div className="edit-delete-buttons">
+                                    <div className="edit-button">
+                                        <Button onClick={() => handleEdit(book)}>
+                                            Edit book rec
+                                        </Button>
+                                    </div>
+                                    <div className="delete-button">
 
-                                <Button onClick={() => handleEdit(book)}>
-                                    Edit book rec
-                                </Button>
-
-                                <Button onClick={() => handleDelete(book)}>
-                                    Delete book
-                                </Button>
+                                        <Button onClick={() => handleDelete(book)}>
+                                            Delete book
+                                        </Button>
+                                    </div>
+                                </div>
                             </>
                         )}
-                        <div className="modal-button">
+                        <div className="return-button">
                             <Button onClick={() => toggleModal(book)}>
                                 Return book
                             </Button>

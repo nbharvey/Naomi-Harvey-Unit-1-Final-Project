@@ -110,9 +110,11 @@ function Form({ book = defaultBook, onFormSubmit }) {
               />
             </label>
           </div>
-          <Button>
-            {book.isEditing ? ('Save Changes') : ('Add Book')}
-          </Button>
+          <div className='form-submit'>
+            <Button>
+              {book.isEditing ? ('Save Changes') : ('Add Book')}
+            </Button>
+          </div>
         </form>
       </div>
     </>
