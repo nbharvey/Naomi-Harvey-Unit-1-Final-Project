@@ -1,34 +1,13 @@
 // import Book from "./Book"
-import Modal from "./Modal";
+import Shelf from "./Shelf";
 import books from "../../books"
 import Form from "./Form";
 import '../../index.css'
 import './Bookshelf.css'
-import { useState, useMemo } from 'react'
-
-function createShelf(b, booksPerShelf) {
-  const shelf = [];
-  for (let i = 0; i < b.length; i += booksPerShelf) {
-    shelf.push(b.slice(i, i + booksPerShelf));
-  }
-  return shelf;
-}
-
+import useBooks from "./useBooks";
 
 function Bookshelf() {
-  const [currentBooks, setCurrentBooks] = useState(books)
-
-  const shelves = useMemo(() => {
-    return createShelf(currentBooks, 12)
-  }, [currentBooks])
-
-  const addNewBook = function (book) {
-    if (!book.spineColor) {
-      book.spineColor = '#6B2F4E';
-    }
-    setCurrentBooks((prevBooks) => [...prevBooks, book]
-    )
-  }
+  const { currentBooks, shelves, addOrUpdateBook, updateBook, editingBook } = useBooks();
 
   return (
     <>
@@ -41,18 +20,21 @@ function Bookshelf() {
           <div className="bookshelf">
             {shelves.map((shelf, i) => (
               <div key={i} className="shelf">
-                <Modal books={shelf} />
+                <Shelf books={shelf} updateBook={updateBook} />
               </div>
             ))}
           </div>
         </div>
         <div className="form-container">
           <img src="./coffeeonbooks.png" className="coffee-on-books" alt="Coffee on Books" />
-          <Form onFormSubmit={addNewBook} />
+          {editingBook ?
+            <Form onFormSubmit={addOrUpdateBook} book={editingBook} />
+            : <Form onFormSubmit={addOrUpdateBook} />
+          }
         </div>
-      </div>
+      </div >
     </>
-  )
+  );
 }
 
 export default Bookshelf

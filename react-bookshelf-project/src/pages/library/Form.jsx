@@ -2,19 +2,25 @@
 import UserData from './UserData'
 import '../../index.css'
 import './Forms.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Button from '../../components/Button';
 
-function Form({ onFormSubmit }) {
-  const [formData, setFormData] = useState([{
-    id: Date.now().toString(),
-    title: '',
-    author: '',
-    note: '',
-    name: '',
-  }]);
+const defaultBook = {
+  id: Date.now().toString(),
+  title: '',
+  author: '',
+  note: '',
+  name: '',
+  isEditing: false,
+};
 
-  const [submittedData, setSubmittedData] = useState(null);
+function Form({ book = defaultBook, onFormSubmit }) {
+  const [formData, setFormData] = useState(book);
+
+  //when currently edited book changes, form data is reset
+  useEffect(() => {
+    setFormData(book);
+  }, [book]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,13 +32,14 @@ function Form({ onFormSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmittedData(formData);
     onFormSubmit(formData);
     setFormData({
+      id: Date.now().toString(),
       title: '',
       author: '',
       note: '',
       name: '',
+      isEditing: false,
     })
   };
 
@@ -105,7 +112,10 @@ function Form({ onFormSubmit }) {
               />
             </label>
           </div>
-          <Button>Add Book</Button>
+          <Button>
+            {book.isEditing ? ('Save Changes') : ('Add Book')}
+
+          </Button>
         </form>
       </div>
     </>

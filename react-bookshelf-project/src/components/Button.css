@@ -4,6 +4,7 @@
     border: 2px solid #6B2F4E;
     height: 25px;
     font-family: 'Literata';
+    z-index: 1001;
 
 }
 .form-submit:hover {
