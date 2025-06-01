@@ -1,0 +1,38 @@
+.form {
+  border: 8px solid #7a4a3b;
+  text-align: center;
+  background-color: #ac8b76;
+  color: black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+input {
+  border-radius: 5px;
+  background-color: #b89e8e;
+  border: transparent;
+  width: auto;
+  height: 25px;
+  width: 90%;
+}
+
+textarea {
+  border-radius: 5px;
+  background-color: #b89e8e;
+  height: 50px;
+  width: 90%;
+}
+.form-submit {
+  z-index: 500;
+}
+
+.form-shelf {
+  border-bottom: 8px solid #7a4a3b;
+  justify-self: center;
+}
+
+::placeholder {
+  color: #6a3d2e;
+}

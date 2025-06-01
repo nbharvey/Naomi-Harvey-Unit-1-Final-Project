@@ -4,10 +4,12 @@
   left: 0;
   width: 100%;
   background-color: #fdf9f2;
-  background-image: url("stars.png");
+  opacity: 1;
+  background-image: url("/hearts.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 30px;
   border-top: 8px solid #697c67;
-
   font-size: 20px;
   z-index: 1000;
   height: 180px;
@@ -22,7 +24,7 @@ span#h1 {
   text-align: center;
   display: block;
   font-style: italic;
-  background-color: #fdf9f2;
+  background-color: transparent;
   padding-left: 0;
   grid-column: 2;
 }
@@ -30,9 +32,9 @@ span#h1 {
 .profile-pic {
   border-radius: 50%;
   border: 2px solid #697c67;
-  width: 140px;
-  height: 140px;
-  margin-right: 0;
+  width: 160px;
+  height: 160px;
+  margin-right: 10px;
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 20px;

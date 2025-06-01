@@ -1,5 +1,5 @@
 import '../../index.css'
-import './Forms.css'
+import './Form.css'
 import { useEffect, useState } from 'react'
 import Button from '../../components/Button';
 

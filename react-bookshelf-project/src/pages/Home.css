@@ -3,8 +3,8 @@
   color: #333333;
   margin: 0;
   padding: 0;
-  background-position: center;  
-  background-repeat: no-repeat; 
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .home-heading-main {
@@ -13,9 +13,9 @@
 }
 
 .home-header {
-  background-color: #fdf9f2;
+  background-color: #697c67;
   color: #333333;
-  border-bottom: 2px dashed #697C67; 
+  padding: 5px;
 }
 
 .para {
@@ -23,8 +23,8 @@
   color: #333333;
 }
 
-.launchcode-mission{
-  border: 2px solid #697C67;
+.launchcode-mission {
+  border: 2px solid #697c67;
   background-color: #fdf9f2;
   padding: 5px;
   color: #fdf9f2;
@@ -32,12 +32,11 @@
 }
 
 .launchcode-mission:hover {
-  background-color: #A89F91;
-  border: 2px solid #A89F91;
-  transition: background-color 0.5s ease; 
+  background-color: #a89f91;
+  border: 2px solid #a89f91;
+  transition: background-color 0.5s ease;
 }
 
 i.fa-solid.fa-rocket {
-  color: #6B2F4E;
+  color: #6b2f4e;
 }
-

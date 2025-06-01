@@ -3,6 +3,7 @@ import Form from "./Form";
 import '../../index.css'
 import './Bookshelf.css'
 import useBooks from "./useBooks";
+import Shimmer from "../../components/Shimmer";
 
 function Bookshelf() {
   const { currentBooks, shelves, addOrUpdateBook, updateBook, editingBook, deleteBook } = useBooks();
@@ -10,7 +11,7 @@ function Bookshelf() {
   return (
     <>
       <div className="library-header-wrapper">
-        <h2 className="library-header">Naomi's Bookshelf</h2>
+        <Shimmer><h2 className="library-header">Naomi's Bookshelf</h2></Shimmer>
       </div>
       <div className="page-layout">
         <div className="bookshelf-container">

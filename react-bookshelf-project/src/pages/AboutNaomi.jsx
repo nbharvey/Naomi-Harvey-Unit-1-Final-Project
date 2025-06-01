@@ -2,16 +2,16 @@ import './AboutNaomi.css'
 
 function AboutNaomi() {
 
-    return (
-        <div className='aboutnaomi'>
+  return (
+    <div className='aboutnaomi'>
       <img
         src="./globe.png"
-                alt="Animation of Naomi"
-                className="globe-pic"
+        alt="Animation of Naomi"
+        className="globe-pic"
       />
       <article>
         <section></section>
-        <h3>👩🏽‍💻🍎 My Journey from Education to Software 🍎👩🏽‍💻 </h3>
+        <h3 className='about-header'>👩🏽‍💻🍎 My Journey from Education to Software 🍎👩🏽‍💻 </h3>
 
         <p>
           I started my career in education, driven by a love for learning and
@@ -21,7 +21,7 @@ function AboutNaomi() {
           foundation, I made the leap into tech.
         </p>
 
-        <h3>🏔️🏃🏽‍♀️‍➡️ Endurance and Adventure 🚴🏽‍♀️🏔️ </h3>
+        <h3 className='about-header'>🏔️🏃🏽‍♀️‍➡️ Endurance and Adventure 🚴🏽‍♀️🏔️ </h3>
         <p>
           From half marathons and triathlons to rock climbing and bike races,
           I'm constantly pushing my limits. My mission? To visit all U.S.
@@ -29,8 +29,8 @@ function AboutNaomi() {
           sports teach me focus, resilience, and adaptability—skills that
           translate beautifully into the tech world. With my background in education, I'm also passionate about creating engaging tools that help kids learn to love and protect nature—empowering the next generation to become curious, informed stewards of the environment.
 
-                </p>
-        <h3>🌎🍃 Plans for my future career 🍃🌎 </h3>
+        </p>
+        <h3 className='about-header'>🌎🍃 Plans for my future career 🍃🌎 </h3>
         <p>
           As someone who thrives in the outdoors, I've experienced firsthand the
           impact of climate change on our trails, oceans, and ecosystems. As
@@ -42,10 +42,10 @@ function AboutNaomi() {
           see software not just as a career, but as a tool to protect the planet
           I love to explore.
         </p>
-            </article>
-            </div>
+      </article>
+    </div>
 
-    )
+  )
 }
 
 export default AboutNaomi
