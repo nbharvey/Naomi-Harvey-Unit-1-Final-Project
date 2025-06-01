@@ -11,8 +11,10 @@ function Bookshelf() {
   return (
     <>
       <div className="library-header-wrapper">
-        <Shimmer><h2 className="library-header">Naomi's Bookshelf</h2></Shimmer>
+        <Shimmer><h2 className="library-header">Welcome to Naomi's Bookshelf!</h2>        </Shimmer>
       </div>
+      <p id="bookshelf-para">These books made the shelf - browse my bookshelf and discover the stories that inspire me!</p>
+
       <div className="page-layout">
         <div className="bookshelf-container">
           <img src="/plants.png" className="plants" alt="plants" />
