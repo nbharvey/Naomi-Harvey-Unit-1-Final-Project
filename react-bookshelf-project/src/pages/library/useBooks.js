@@ -1,5 +1,6 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect } from 'react';
 import books from '../../books';
+import { getItem, setItem } from '../../utils/localStorage'
 
 function createShelf(b, booksPerShelf) {
     const shelf = [];
@@ -11,11 +12,20 @@ function createShelf(b, booksPerShelf) {
 
 //created useBooks hook to wrap functions and state that manage book, for clean code
 function useBooks() {
-    const [currentBooks, setCurrentBooks] = useState(books)
+    const [currentBooks, setCurrentBooks] = useState(() => {
+        const item = getItem('currentBooks');
+        return item || books;
+    });
+
+
+    useEffect(() => {
+        setItem('currentBooks', currentBooks)
+    }, [currentBooks]);
 
     const shelves = useMemo(() => {
         return createShelf(currentBooks, 12)
     }, [currentBooks])
+
 
     const addOrUpdateBook = function (book) {
         book.isEditing = false;
@@ -26,7 +36,7 @@ function useBooks() {
         //filtering because static books should not be allowed to be edited
         if (currentBooks.filter((b) => b.name && (b.id === book.id)).length > 0) {
             updateBook(book);
-            // this adds a new book to the array
+            //this adds a new book to the array
         } else {
             setCurrentBooks((prevBooks) => [...prevBooks, book]
             )
