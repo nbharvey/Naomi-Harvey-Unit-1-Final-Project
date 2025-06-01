@@ -11,7 +11,7 @@ function AboutNaomi() {
       />
       <article>
         <section></section>
-        <h3 className='about-header'>👩🏽‍💻🍎 My Journey from Education to Software 🍎👩🏽‍💻 </h3>
+        <h3 className='naomi-header'>👩🏽‍💻🍎 My Journey from Education to Software 🍎👩🏽‍💻 </h3>
 
         <p>
           I started my career in education, driven by a love for learning and
@@ -21,7 +21,7 @@ function AboutNaomi() {
           foundation, I made the leap into tech.
         </p>
 
-        <h3 className='about-header'>🏔️🏃🏽‍♀️‍➡️ Endurance and Adventure 🚴🏽‍♀️🏔️ </h3>
+        <h3 className='naomi-header'>🏔️🏃🏽‍♀️‍➡️ Endurance and Adventure 🚴🏽‍♀️🏔️ </h3>
         <p>
           From half marathons and triathlons to rock climbing and bike races,
           I'm constantly pushing my limits. My mission? To visit all U.S.
@@ -30,7 +30,7 @@ function AboutNaomi() {
           translate beautifully into the tech world. With my background in education, I'm also passionate about creating engaging tools that help kids learn to love and protect nature—empowering the next generation to become curious, informed stewards of the environment.
 
         </p>
-        <h3 className='about-header'>🌎🍃 Plans for my future career 🍃🌎 </h3>
+        <h3 className='naomi-header'>🌎🍃 Plans for my future career 🍃🌎 </h3>
         <p>
           As someone who thrives in the outdoors, I've experienced firsthand the
           impact of climate change on our trails, oceans, and ecosystems. As

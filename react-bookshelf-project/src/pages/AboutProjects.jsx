@@ -4,21 +4,21 @@ import { NavLink } from 'react-router-dom'
 function AboutProjects() {
     const data = [
         {
-            project: <NavLink to="/library" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}>Library</NavLink>,
+            project: <NavLink to="/library" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}><i className="to-library fa-solid fa-link"><br /></i>Library</NavLink>,
             stack: 'React + Vite',
-            purpose: "This app serves as a way for vistors of my website to interact with my content and leave their signature in the form of a book recommendation.",
-            challenges: "Managing state complexity and the flow of data. I used props to share state between components and lifted state up to common ancestors when needed. This allowed my Form and Modal components to be synced, which was important when managing my books and my user books."
+            purpose: "This app serves as a way for vistors of my website to interact with my content and leave their signature in the form of a book recommendation. Database capabilites in progress!",
+            challenges: "Managing state complexity and the flow of data. I used props to share state between components and lifted state up to common ancestors when needed."
         },
         {
-            project: <NavLink to="/nationalparkexplorer" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}>National Park Explorer</NavLink>,
+            project: <NavLink to="/nationalparkexplorer" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}><i className="to-library fa-solid fa-link"><br /></i>National Park Explorer</NavLink>,
             stack: 'React + TailwindCSS',
             purpose: "This app is a work in progress! It will generate facts for users about National Parks and give them trip advice.",
             challenges: "Using React Context to track state management in a maintable way."
         },
         {
-            project: <NavLink to="/triathlontracker" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}>Triathlon Tracker</NavLink>,
+            project: <NavLink to="/triathlontracker" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}><i className="to-library fa-solid fa-link"><br /></i>Triathlon Tracker</NavLink>,
             stack: 'React + Firebase',
-            purpose: "This app is a work in progress! It will allow for user accounts and use more complex data access patterns like analyzing workouts and creating the next weeks workout plans dynamically.",
+            purpose: "This app is a work in progress! It will allow for user accounts and use more complex data access patterns like analyzing workouts to creating an athletes plans with dynamic calculations.",
             challenges: "Creating an algorithim for calculating workouts and adjusting them based on a user's prior workout",
         },
     ]
@@ -36,22 +36,26 @@ function AboutProjects() {
             </p>
 
             <table className='my-table'>
-                <tr className='table-header'>
-                    <th>Project Title</th>
-                    <th>Tech Stack</th>
-                    <th>Purpose of App</th>
-                    <th>Challenges & Solutions</th>
-                </tr>
-                {data.map((val, key) => {
-                    return (
-                        <tr key={key}>
-                            <td>{val.project}</td>
-                            <td>{val.stack}</td>
-                            <td>{val.purpose}</td>
-                            <td>{val.challenges}</td>
-                        </tr>
-                    )
-                })}
+                <thead className='table-header'>
+                    <tr>
+                        <th>Project Title</th>
+                        <th>Tech Stack</th>
+                        <th>Purpose of App</th>
+                        <th>Challenges & Solutions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((val, key) => {
+                        return (
+                            <tr key={key}>
+                                <td>{val.project}</td>
+                                <td>{val.stack}</td>
+                                <td>{val.purpose}</td>
+                                <td>{val.challenges}</td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
             </table>
         </>
     )

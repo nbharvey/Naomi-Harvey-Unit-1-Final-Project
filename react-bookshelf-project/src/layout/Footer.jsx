@@ -1,5 +1,4 @@
 import './Footer.css'
-import Shimmer from '../components/Shimmer'
 import { Link } from 'react-router-dom'
 
 function Footer() {
@@ -8,11 +7,11 @@ function Footer() {
 
     <div className='footer'>
       <div id="copyright">
-        <small><i className="fa-solid fa-copyright"></i>     2025 Naomi Harvey</small>
+        <p><i className="fa-solid fa-copyright"></i>     2025 Naomi Harvey</p>
       </div>
 
       <div id="location">
-        <small>St. Louis, MO</small>
+        <p>St. Louis, MO</p>
       </div>
 
       <div className='list'>
