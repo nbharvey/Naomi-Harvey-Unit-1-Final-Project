@@ -10,13 +10,13 @@ function AboutProjects() {
             challenges: "Managing state complexity and the flow of data. I used props to share state between components and lifted state up to common ancestors when needed. This allowed my Form and Modal components to be synced, which was important when managing my books and my user books."
         },
         {
-            project: <NavLink to="/library" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}>National Park Explorer</NavLink>,
+            project: <NavLink to="/nationalparkexplorer" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}>National Park Explorer</NavLink>,
             stack: 'React + TailwindCSS',
             purpose: "This app is a work in progress! It will generate facts for users about National Parks and give them trip advice.",
             challenges: "Using React Context to track state management in a maintable way."
         },
         {
-            project: <NavLink to="/library" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}>Triathlon Tracker</NavLink>,
+            project: <NavLink to="/triathlontracker" className={({ isActive }) => `project-link${isActive ? 'active-link' : ''}`}>Triathlon Tracker</NavLink>,
             stack: 'React + Firebase',
             purpose: "This app is a work in progress! It will allow for user accounts and use more complex data access patterns like analyzing workouts and creating the next weeks workout plans dynamically.",
             challenges: "Creating an algorithim for calculating workouts and adjusting them based on a user's prior workout",
