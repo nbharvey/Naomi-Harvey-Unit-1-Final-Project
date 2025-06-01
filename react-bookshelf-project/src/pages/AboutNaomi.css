@@ -20,11 +20,29 @@
   padding: 5px;
   text-align: center;
 }
-table {
+.project-link {
+  color: #333333;
+  text-decoration: underline;
+  text-decoration-color: #9a5679;
+  display: block;
+}
+
+.project-link:hover {
+  background-color: #9a5679;
+  color: #6b2f4e;
+}
+
+.my-table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   border: 4px solid #697c67;
+  background-color: hsla(313, 52%, 18%, 0.185);
+  text-align: center;
+}
+
+tr {
+  vertical-align: top;
 }
 
 thead th:nth-child(1) {

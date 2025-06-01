@@ -35,18 +35,14 @@ function Book({ book, toggleModal, isOpen, formData, setFormData, updateBook, de
                         {/* if there is no book.name, it evaluates to true and will display the content of the ul. */}
                         {!book.name && (
                             <div className='book-content'>
-                                <div className="left-content">
-                                    <ul>
-                                        <li><h2 id="open-book-header" style={{ backgroundColor: book.spineColor }}>{book.title}</h2></li>
-                                        <li><p id="author">Author: {book.author}</p></li>
-                                        <li><p id="genre">Genre: {book.status}</p></li>
-                                    </ul>
-                                </div>
-                                <div className="right-content">
-                                    <ul>
-                                        <li><p id="description">Summary: {book.description}</p></li>
-                                    </ul>
-                                </div>
+                                <ul>
+                                    <li><h2 id="open-book-header" style={{ backgroundColor: book.spineColor }}>{book.title}</h2></li>
+                                    <li><p id="author">Author: {book.author}</p></li>
+                                    <li><p id="genre">Genre: {book.status}</p></li>
+                                    <li><p id="description">Summary: {book.description}</p></li>
+                                    <li><p id="because">{book.because}</p></li>
+
+                                </ul>
                             </div>
                         )}
 
