@@ -1,4 +1,5 @@
 import './Header.css';
+import Shimmer from '../components/Shimmer';
 
 function Header() {
 
@@ -9,7 +10,9 @@ function Header() {
                     <img src="/studying.png" className="profile-pic" alt="Animation of Naomi" />
                 </div>
                 <h1>
-                    <span id="h1">Naomi's Digital Playground</span>
+                    <Shimmer>
+                        <span id="h1">Naomi's Digital Playground</span>
+                    </Shimmer>
                 </h1>
             </div>
         </>
