@@ -17,7 +17,6 @@ function useBooks() {
         return item || books;
     });
 
-
     useEffect(() => {
         setItem('currentBooks', currentBooks)
     }, [currentBooks]);
@@ -55,14 +54,12 @@ function useBooks() {
     //useMemo calculates state automatically when it's dependencies change
     //if unedfined, it will return null
     const editingBook = useMemo(() => {
-        console.log("Currently edited book changed");
         return (
             currentBooks.filter((b) => b.name && (b.isEditing))[0] ?? null
         );
     }, [currentBooks]);
 
     function deleteBook(bookToDelete) {
-        console.log("Book is deleting");
         setCurrentBooks((prevBooks) => {
             return prevBooks.filter((b) => b.id !== bookToDelete.id);
         }
