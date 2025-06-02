@@ -6,6 +6,7 @@ import useBooks from "./useBooks";
 import Shimmer from "../../components/Shimmer";
 
 function Bookshelf() {
+  //creates custom hook
   const { currentBooks, shelves, addOrUpdateBook, updateBook, editingBook, deleteBook } = useBooks();
 
   return (
@@ -19,6 +20,7 @@ function Bookshelf() {
         <div className="bookshelf-container">
           <img src="/plants.png" className="plants" alt="plants" />
           <div className="bookshelf">
+            {/* mapping over shelf and placing books by index */}
             {shelves.map((shelf, i) => (
               <div key={i} className="shelf">
                 <Shelf books={shelf} updateBook={updateBook} deleteBook={deleteBook} />

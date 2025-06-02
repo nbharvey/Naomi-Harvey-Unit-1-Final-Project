@@ -1,7 +1,7 @@
 import './Spinner.css'
 
 function Spinner() {
-
+    // spinner made with loading.io
     return (
         <>
             <div className='spinner-img'>

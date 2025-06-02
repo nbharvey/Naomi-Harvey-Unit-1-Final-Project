@@ -7,6 +7,7 @@ const PageNotFound = () => {
                 <h1 className='error-header'>This page does not exist yet!</h1>
                 <h2 className='error-para'>Pour yourself a cup of coffee while you wait, my treat.</h2>
             </div>
+            {/* coffee maker animation */}
             <div className="container">
                 <div className="coffee-header">
                     <div className="coffee-header__buttons coffee-header__button-one"></div>

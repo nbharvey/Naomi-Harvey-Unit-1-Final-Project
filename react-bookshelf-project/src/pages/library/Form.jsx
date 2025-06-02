@@ -3,6 +3,7 @@ import './Form.css'
 import { useEffect, useState } from 'react'
 import Button from '../../components/Button';
 
+//sets up default books
 const defaultBook = {
   id: Date.now().toString(),
   title: '',
@@ -15,11 +16,11 @@ const defaultBook = {
 function Form({ book = defaultBook, onFormSubmit }) {
   const [formData, setFormData] = useState(book);
 
-  //when currently edited book changes, form data is reset
+  //every time book object changes, the effect repopulates the form with the new book data
   useEffect(() => {
     setFormData(book);
   }, [book]);
-
+  //handles new input and prevents the clearing of other inputs upon edit
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -27,7 +28,7 @@ function Form({ book = defaultBook, onFormSubmit }) {
       [name]: value,
     }));
   };
-
+  //prevents page reload on submit and sends current form data to parent
   const handleSubmit = (e) => {
     e.preventDefault();
     onFormSubmit(formData);
