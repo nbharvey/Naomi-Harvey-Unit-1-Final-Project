@@ -28,20 +28,17 @@ function Book({ book, toggleModal, isOpen, formData, setFormData, updateBook, de
                 </div>
 
                 {isOpen && (
-                    <div className="modal">
-                        <div onClick={toggleModal} className="overlay" >
-                            <img src="/openbook.png" className="book-image" alt="Open Book" />
-                        </div>
+                    <div onClick={toggleModal} className="modal">
+
                         {/* if there is no book.name, it evaluates to true and will display the content of the ul. */}
                         {!book.name && (
                             <div className='book-content'>
-                                <ul>
+                                <ul className="ul-book-style">
                                     <li><h2 id="open-book-header" style={{ backgroundColor: book.spineColor }}>{book.title}</h2></li>
                                     <li><p id="author">Author: {book.author}</p></li>
                                     <li><p id="genre">Genre: {book.status}</p></li>
                                     <li><p id="description">Summary: {book.description}</p></li>
                                     <li><p id="because">{book.because}</p></li>
-
                                 </ul>
                             </div>
                         )}
@@ -51,17 +48,19 @@ function Book({ book, toggleModal, isOpen, formData, setFormData, updateBook, de
                         {book.name && (
                             <>
                                 <UserData data={book} />
-                                <div className="edit-delete-buttons">
-                                    <div className="edit-button">
-                                        <Button onClick={() => handleEdit(book)}>
-                                            Edit book rec
-                                        </Button>
-                                    </div>
-                                    <div className="delete-button">
+                                <div className="modal-buttons">
+                                    <div className="edit-delete-buttons">
+                                        <div className="edit-button">
+                                            <Button onClick={() => handleEdit(book)}>
+                                                Edit book rec
+                                            </Button>
+                                        </div>
+                                        <div className="delete-button">
 
-                                        <Button onClick={() => handleDelete(book)}>
-                                            Delete book
-                                        </Button>
+                                            <Button onClick={() => handleDelete(book)}>
+                                                Delete book
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             </>
@@ -80,4 +79,3 @@ function Book({ book, toggleModal, isOpen, formData, setFormData, updateBook, de
 }
 
 export default Book;
-

@@ -6,10 +6,9 @@ function UserData({ data }) {
     <>
       {data && (
         <div className='modal'>
-          <div className='overlay'></div>
           <div className='book-content'>
-            <ul>
-              <li><h2 id="open-book-header">{data.title}</h2></li>
+            <ul className='ul-book-style'>
+              <li><h2 id="user-book-header">{data.title}</h2></li>
               <li><p id='author'>Author: {data.author}</p></li>
               <li><p id='note'>My note: {data.note}❣</p></li>
               <li><p id='rec'>This recommendation is from {data.name}❣</p></li>

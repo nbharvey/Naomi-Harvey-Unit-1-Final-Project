@@ -41,119 +41,125 @@
 
 .modal {
   position: fixed;
-  top: 5vh;
-  left: 5vw;
-  width: clamp(280px, 80vw, 900px);
-  height: clamp(300px, 80vh, 700px);
+  top: clamp(30vh, 15%, 450px);
+  left: clamp(2vw, 20%, 25vw);
+  width: clamp(300px, 50vw, 700px);
+  height: clamp(200px, 40vh, 600px);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.overlay {
-  position: fixed;
-  top: 30vh;
-  left: 5vw;
-  width: clamp(280px, 80vw, 900px);
-  height: clamp(300px, 80vh, 700px);
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: flex-start; /* So content stacks from top */
   align-items: center;
-  overflow: hidden;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 2rem 1rem 12rem; /* Add space for buttons at bottom */
+  background-color: #fdf9f2;
+  border: 4px solid #6a3d2e;
   border-radius: 5px;
-}
-
-.book-image {
-  position: absolute;
-  display: flex;
-  justify-content: flex-start;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  z-index: 1001;
 }
 
 .book-content {
-  position: absolute;
-  top: 50%;
-  left: 0;
+  position: relative; /* Changed from absolute */
   width: 100%;
   height: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  z-index: 1;
   padding: 2rem;
   box-sizing: border-box;
+  padding: 10px;
 }
-
-.book-content ul {
+.ul-book-style {
   list-style-type: none;
   overflow-wrap: break-word;
   word-break: break-word;
+  padding: 10px;
   max-height: 100%;
   overflow-y: auto;
 }
 
 #open-book-header {
-  width: 70%;
+  width: 100%;
   align-items: center;
-  padding: 5px;
+  text-align: center;
+}
+#user-book-header {
+  width: 100%;
+  text-align: center;
+  background-color: #697c67;
+}
+.modal-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .return-button {
   position: absolute;
+  bottom: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 0;
-  z-index: 1001;
+  justify-content: flex-end;
+  z-index: 9999;
+  box-sizing: border-box;
 }
 
 .edit-delete-buttons {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  z-index: 1001;
+  justify-content: space-between;
+  z-index: 9999;
 }
 
 @media (max-width: 600px) {
   .spine {
-    font-size: 10px;
-    width: 20px;
+    font-size: 8px;
+    width: 16px;
+    max-height: 80px;
+    padding-top: 1px;
   }
 
-  .modal-content {
-    padding: 10px;
+  .modal {
+    width: 95vw;
+    height: 90vh;
+    left: 2.5vw;
+    top: 5vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content and buttons stay apart */
   }
 
   .book-content {
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0.5rem;
   }
 
-  .left-content,
-  .right-content {
+  .ul-book-style {
     width: 100%;
-    max-width: 90%;
-    text-align: center;
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+
+  #open-book-header {
+    font-size: 1rem;
+  }
+
+  .return-button,
+  .edit-delete-buttons {
+    position: relative; /* Relative inside modal */
+    bottom: auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
   }
 }

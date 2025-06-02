@@ -41,8 +41,8 @@
 
 .library-header {
   padding: 10px;
-  border-top: 4px solid #6b2f4e;
-  border-bottom: 4px solid #6b2f4e;
+  border-top: 4px solid #6a3d2e;
+  border-bottom: 4px solid #6a3d2e;
   color: #6b2f4e;
   text-align: center;
 }
@@ -50,9 +50,9 @@
 #bookshelf-para {
   padding: 5px;
   text-align: center;
-  border-top: 4px solid #6b2f4e;
+  border-top: 4px solid #6a3d2e;
 
-  border-bottom: 4px solid #6b2f4e;
+  border-bottom: 4px solid #6a3d2e;
 }
 
 .bookshelf {
