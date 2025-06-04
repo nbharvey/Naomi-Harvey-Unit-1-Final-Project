@@ -1,34 +1,46 @@
+.header-background-common {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fdf9f2;
+  background-color: transparent;
   opacity: 1;
   /* background-image: url("/hearts.png");
   background-repeat: no-repeat; */
-  background-size: cover;
   padding: 10px;
   border-top: 8px solid #697c67;
   font-size: 20px;
   z-index: 1000;
-  height: 120px;
+  height: 148px;
   overflow: visible;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  box-sizing: border-box;
 }
 
-.header blackHearts {
+.header.headerBlack {
   background-image: url("/blackHearts.png");
 }
-.header maroonHearts {
+.header.headerPurple {
+  background-image: url("/purpleHearts.png");
+}
+.header.headerOrange {
+  background-image: url("/orangeHearts.png");
+}
+.header.headerMaroon {
   background-image: url("/maroonHearts.png");
 }
-.header blueHearts {
+.header.headerBlue {
   background-image: url("/blueHearts.png");
 }
-.header greenHearts {
+.header.headerGreen {
   background-image: url("/greenHearts.png");
 }
 
@@ -48,12 +60,12 @@ span#h1 {
 .profile-pic {
   border-radius: 50%;
   border: 2px solid #697c67;
-  width: 110px;
-  height: 110px;
-  margin-right: 10px;
-  margin-left: 10px;
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  /* margin-left: 10px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 00px; */
   box-sizing: border-box;
   grid-column: 1;
   justify-self: start;
@@ -63,7 +75,7 @@ span#h1 {
 @media (max-width: 600px) {
   .header {
     height: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     padding: 20px;
     text-align: center;
@@ -71,8 +83,8 @@ span#h1 {
   }
 
   .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     grid-column: 1;
     grid-row: 1;
     margin: 0 0 10px 0;
@@ -80,8 +92,8 @@ span#h1 {
   }
 
   span#h1 {
-    grid-column: 1;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 1;
     font-size: 16px;
   }
 }

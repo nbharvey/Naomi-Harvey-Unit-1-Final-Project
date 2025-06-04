@@ -1,14 +1,17 @@
 import './AboutNaomi.css'
+import { Link } from 'react-router-dom'
 
 function AboutNaomi() {
 
   return (
     <div className='aboutnaomi'>
-      <img
-        src="./globe.png"
-        alt="Animation of Naomi"
-        className="globe-pic"
-      />
+      <Link to='/naomimap'>
+        <img
+          src="./globe2.png"
+          alt="Animation of Naomi"
+          className="globe-pic"
+        />
+      </Link>
       <article>
         <section></section>
         <h3 className='naomi-header'>👩🏽‍💻🍎 My Journey from Education to Software 🍎👩🏽‍💻 </h3>

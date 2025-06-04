@@ -20,10 +20,11 @@ function App() {
     setLoading(true);
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 500);
 
     return () => clearTimeout(timeout);
   }, [location.pathname]);
+
   return (
     <>
       {loading && <Spinner />}
