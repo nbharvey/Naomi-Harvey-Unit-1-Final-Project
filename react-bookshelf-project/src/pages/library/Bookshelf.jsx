@@ -4,16 +4,50 @@ import '../../index.css'
 import './Bookshelf.css'
 import useBooks from "./useBooks";
 import Shimmer from "../../components/Shimmer";
+import { useState } from "react";
 
+
+let id = 0;
 function Bookshelf() {
   //creates custom hook
   const { currentBooks, shelves, addOrUpdateBook, updateBook, editingBook, deleteBook } = useBooks();
+  const [emojis, setEmojis] = useState([]);
 
+  const dropEmoji = (e) => {
+    const x = e.clientX;
+    setEmojis((prev) => [
+      ...prev,
+      {
+        id: id++,
+        x,
+        emoji: "📚",
+      },
+    ]);
+  };
   return (
     <>
+
       <div className="library-header-wrapper">
-        <Shimmer><h2 className="library-header">Welcome to Naomi's Bookshelf!</h2>        </Shimmer>
-      </div>
+        <div className="app" onClick={dropEmoji}>
+          <Shimmer><h2 className="library-header">Welcome to Naomi's Bookshelf!
+          </h2>
+          </Shimmer>
+          {/* <button className="drop-btn">Click to Drop Emoji</button> */}
+          {emojis.map(({ id, x, emoji }) => (
+            <span
+              key={id}
+              className="emoji"
+              style={{ left: x }}
+              onAnimationEnd={() =>
+                setEmojis((prev) => prev.filter((e) => e.id !== id))
+              }
+            >
+              {emoji}
+            </span>
+          ))}
+        </div>
+
+      </div >
       <p id="bookshelf-para">These books made the shelf - browse my bookshelf and discover the stories that inspire me!</p>
 
       <div className="page-layout">

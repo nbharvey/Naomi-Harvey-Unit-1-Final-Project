@@ -118,3 +118,29 @@
     grid-row: auto;
   }
 }
+
+.app {
+  position: relative;
+  /* height: 10vh; */
+  overflow: hidden;
+  background: transparent;
+}
+
+.emoji {
+  position: absolute;
+  top: 0;
+  font-size: 1rem;
+  animation: fall 5s ease-in forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(90vh);
+    opacity: 0.8;
+  }
+}
